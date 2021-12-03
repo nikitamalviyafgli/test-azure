@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Upload Python Package
+name: Test Py APP
 
 on:
   release:
@@ -31,3 +31,4 @@ jobs:
                 
     - name: Build APP
       run: python app.py
+    
