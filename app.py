@@ -18,8 +18,8 @@ def index():
             print(f"\nresponse : {response}")
             name = response["name"]
             print(name)
-            print(jsonify({'result':name, 'errorcode': "1",  'errormessage':""}))
-            return jsonify({'result':name, 'errorcode': "1",  'errormessage':""})
+            print(jsonify({'result':name, 'errorcode': "0",  'errormessage':""}))
+            return jsonify({'result':name, 'errorcode': "0",  'errormessage':""})
         except Exception as e:
                print(f"Exception Raised : {e}, errorOnLine: {sys.exc_info()[-1].tb_lineno}")
                result=""
@@ -28,4 +28,4 @@ def index():
     #return "Hello user!"
 
 if __name__ == "__main__":
-    app.run(host=0.0.0.0, debug=True)
+    app.run(host="0.0.0.0", port=8083, debug=True)
